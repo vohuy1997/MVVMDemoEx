@@ -11,9 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.toView()
     }
-
+    
+    func toView () {
+        let githubViewController = GithubViewController(nibName: "GithubViewController", bundle: nil)
+        self.navigationController?.pushViewController(githubViewController, animated: true)
+    }
 
 }
 
